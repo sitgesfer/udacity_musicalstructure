@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Muziko</string>
+    <string name="playlists">Playlists</string>
+    <string name="favorites">Favorites</string>
+    <string name="now_playing">Now playing</string>
+    <string name="playlist_title">Playlist title</string>
+    <string name="play_song">Play song</string>
+    <string name="song_image">Song image</string>
+    <string name="all_songs">All songs</string>
+    <string name="empty_playlist">We\'re sorry, this playlist is empty!</string>
+    <string name="play_button">Play button</string>
+    <string name="song_cover">Song cover</string>
+    <string name="duration_template">%1$d:%2$d</string>
+    <string name="search_title">Find your favorite music</string>
+    <string name="available_soon">This feature will be available soon!</string>
+    <string name="telescope">Telescope</string>
+</resources>

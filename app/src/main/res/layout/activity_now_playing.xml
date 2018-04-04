@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".NowPlayingActivity">
+
+    <ImageView
+        android:id="@+id/song_cover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/song_album"
+        app:layout_constraintBottom_toTopOf="@id/song_duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/nowplaying_cover_padding"
+        tools:src="@drawable/portada1"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/song_cover" />
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/nowplaying_title_textsize"
+        android:paddingLeft="@dimen/nowplaying_horizontal_padding"
+        android:paddingRight="@dimen/nowplaying_horizontal_padding"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Song title a very long title" />
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="@dimen/nowplaying_artist_textsize"
+        android:textAlignment="center"
+        android:paddingLeft="@dimen/nowplaying_horizontal_padding"
+        android:paddingRight="@dimen/nowplaying_horizontal_padding"
+        app:layout_constraintTop_toBottomOf="@id/song_title"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Artist" />
+
+    <TextView
+        android:id="@+id/song_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="@dimen/nowplaying_album_textsize"
+        android:textAlignment="center"
+        android:paddingLeft="@dimen/nowplaying_horizontal_padding"
+        android:paddingRight="@dimen/nowplaying_horizontal_padding"
+        app:layout_constraintTop_toBottomOf="@id/song_artist"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Album" />
+
+    <TextView
+        android:id="@+id/song_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        android:textColor="@android:color/darker_gray"
+        android:textAlignment="center"
+        tools:text="2:30" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_skip_previous_white"
+        android:contentDescription="@string/play_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        android:paddingTop="@dimen/nowplaying_button_padding" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_pause_circle_outline_white"
+        android:contentDescription="@string/play_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        android:paddingTop="@dimen/nowplaying_button_padding" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_skip_next_white"
+        android:contentDescription="@string/play_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="@dimen/nowplaying_button_padding" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+</android.support.constraint.ConstraintLayout>
